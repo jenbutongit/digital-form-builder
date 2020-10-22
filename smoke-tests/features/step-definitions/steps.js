@@ -86,7 +86,7 @@ When("I edit the page title on the {string}", (pageName) => {
 
 Then("the changes are reflected in the page designer", () => {
   FormDesignerPage.designerMenu.waitForDisplayed();
-  console.log(FormDesignerPage.getTitleTextForPage(this.newPageName));
+  // console.log(FormDesignerPage.getTitleTextForPage(this.newPageName));
   expect(FormDesignerPage.getTitleTextForPage(this.newPageName)).toBe(
     this.newPageName
   );

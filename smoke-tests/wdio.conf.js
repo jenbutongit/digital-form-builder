@@ -1,3 +1,13 @@
+const environment = require("./support/environments");
+const ENV = process.env.ENV;
+
+if (!ENV || !["dev", "test"].includes(ENV)) {
+  console.log(
+    "Please use the following format when running tests: ENV=dev|test"
+  );
+  process.exit();
+}
+
 exports.config = {
   runner: "local",
   specs: ["./features/**/*.feature"],
@@ -16,12 +26,12 @@ exports.config = {
   ],
 
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "info",
+  logLevel: "error",
 
   // If you only want to run your tests until a specific amount of tests have failed use
   // bail (default is 0 - don't bail, run all tests).
   bail: 0,
-  baseUrl: "http://localhost:3000",
+  baseUrl: environment[process.env.ENV],
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 5000,

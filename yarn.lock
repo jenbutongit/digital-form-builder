@@ -2811,9 +2811,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/cli@npm:^6.6.0":
-  version: 6.6.6
-  resolution: "@wdio/cli@npm:6.6.6"
+"@wdio/cli@npm:^6.6.7":
+  version: 6.6.7
+  resolution: "@wdio/cli@npm:6.6.7"
   dependencies:
     "@wdio/config": 6.6.3
     "@wdio/logger": 6.6.0
@@ -2830,12 +2830,12 @@ __metadata:
     lodash.union: ^4.6.0
     mkdirp: ^1.0.4
     recursive-readdir: ^2.2.2
-    webdriverio: 6.6.6
+    webdriverio: 6.6.7
     yargs: ^16.0.3
     yarn-install: ^1.0.0
   bin:
     wdio: bin/wdio.js
-  checksum: ec636068fef810a718a28da88305257fd79b567f554cf53795bf941e7978366e028da7a57acb7a8bdfbe318c664ba07919a6b3228fdc39fcf71130ce99821711
+  checksum: f1d6a936faf285f63f93996d724dcd03d0bb36c3640f537c1fb6e809373e30efebd152e4b421fb78f8054544a65bdc2fd56fca01820d4c8ac5d606d2af184c05
   languageName: node
   linkType: hard
 
@@ -3508,7 +3508,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xgovformbuilder/test@workspace:smoke-tests"
   dependencies:
-    "@wdio/cli": ^6.6.0
+    "@wdio/cli": ^6.6.7
     "@wdio/cucumber-framework": ^6.6.0
     "@wdio/local-runner": ^6.6.0
     "@wdio/mocha-framework": ^6.6.0
@@ -20318,6 +20318,36 @@ typescript@^4.0.3:
     serialize-error: ^7.0.0
     webdriver: 6.6.3
   checksum: fba1962fe3db11dcaa5de96d7568a25a93f695222c913ef4b700533c00b044d360f816f8ee45dcecc39f6339f213362e43ba7021a7de11e1990fafe5938bac24
+  languageName: node
+  linkType: hard
+
+"webdriverio@npm:6.6.7":
+  version: 6.6.7
+  resolution: "webdriverio@npm:6.6.7"
+  dependencies:
+    "@types/puppeteer": ^3.0.1
+    "@wdio/config": 6.6.3
+    "@wdio/logger": 6.6.0
+    "@wdio/repl": 6.6.3
+    "@wdio/utils": 6.6.3
+    archiver: ^5.0.0
+    atob: ^2.1.2
+    css-value: ^0.0.1
+    devtools: 6.6.3
+    fs-extra: ^9.0.1
+    get-port: ^5.1.1
+    grapheme-splitter: ^1.0.2
+    lodash.clonedeep: ^4.5.0
+    lodash.isobject: ^3.0.2
+    lodash.isplainobject: ^4.0.6
+    lodash.zip: ^4.2.0
+    minimatch: ^3.0.4
+    puppeteer-core: ^5.1.0
+    resq: ^1.9.1
+    rgb2hex: ^0.2.0
+    serialize-error: ^7.0.0
+    webdriver: 6.6.3
+  checksum: 802940a195e1b665f2b63defd4cfc80c97278fcc87ca346b650186f01afa2d15fe183e541960055503bc4dfbb4df066084db5161650b3ff452073db074d687a6
   languageName: node
   linkType: hard
 
