@@ -1,5 +1,6 @@
 const environment = require("./support/environments");
 const ENV = process.env.ENV;
+const { HtmlReporter } = require("@rpii/wdio-html-reporter");
 
 if (!ENV || !["dev", "test"].includes(ENV)) {
   console.log(
@@ -19,14 +20,19 @@ exports.config = {
       //
       browserName: "chrome",
       "goog:chromeOptions": {
-        args: ["--headless"],
+        args: [
+          "--headless",
+          "--disable-gpu",
+          "--window-size=1280x1024",
+          "--disable-dev-shm-usage",
+        ],
       },
       acceptInsecureCerts: true,
     },
   ],
 
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "error",
+  logLevel: "info",
 
   // If you only want to run your tests until a specific amount of tests have failed use
   // bail (default is 0 - don't bail, run all tests).
@@ -47,17 +53,26 @@ exports.config = {
   reporters: [
     "spec",
     [
-      "cucumberjs-json",
+      HtmlReporter,
       {
-        jsonFolder: "./reports/json/",
-        language: "en",
+        debug: false,
+        outputDir: "./reports/html-reports/",
+        filename: "report.html",
+        reportTitle: "Test Report Title",
+
+        //to show the report in a browser when done
+        showInBrowser: false,
+
+        //to turn on screenshots after every test
+        useOnAfterCommandForScreenshot: false,
       },
     ],
   ],
+
   cucumberOpts: {
     require: ["./features/step-definitions/steps.js"],
     backtrace: false,
-    requireModule: [],
+    requireModule: ["@babel/register"],
     dryRun: false,
     failFast: false,
     format: ["pretty"],
@@ -65,7 +80,7 @@ exports.config = {
     source: true,
     profile: [],
     strict: false,
-    tagExpression: "",
+    tagExpression: "@debug",
     timeout: 60000,
     ignoreUndefinedDefinitions: false,
   },
@@ -75,6 +90,33 @@ exports.config = {
   // =====
 
   beforeFeature: function () {
+    // const fs = require("fs");
+    // // directory path
+    // const dir = "./reports/html-reports/";
+    // // delete directory recursively
+    // fs.rmdir(dir, { recursive: true }, (err) => {
+    //   if (err) {
+    //     throw err;
+    //   }
+    //   console.log(`${dir} is deleted!`);
+    // });
     browser.maximizeWindow();
+  },
+
+  afterScenario: function (uri, feature, scenario, result, sourceLocation) {
+    const path = require("path");
+    const moment = require("moment");
+    // if test passed, ignore, else take and save screenshot.
+    if (result.status === "passed") {
+      return;
+    } else {
+      const timestamp = moment().format("DDMMYYYY-HHmmss.SSS");
+      const filepath = path.join(
+        "reports/html-reports/screenshots/",
+        timestamp + ".png"
+      );
+      browser.saveScreenshot(filepath);
+      process.emit("test:screenshot", filepath);
+    }
   },
 };
