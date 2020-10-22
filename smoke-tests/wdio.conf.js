@@ -1,6 +1,5 @@
 const environment = require("./support/environments");
 const ENV = process.env.ENV;
-const { HtmlReporter } = require("@rpii/wdio-html-reporter");
 
 if (!ENV || !["dev", "test"].includes(ENV)) {
   console.log(
@@ -53,18 +52,12 @@ exports.config = {
   reporters: [
     "spec",
     [
-      HtmlReporter,
+      "junit",
       {
-        debug: false,
-        outputDir: "./reports/html-reports/",
-        filename: "report.html",
-        reportTitle: "Test Report Title",
-
-        //to show the report in a browser when done
-        showInBrowser: false,
-
-        //to turn on screenshots after every test
-        useOnAfterCommandForScreenshot: false,
+        outputDir: "./reports/ci/",
+        outputFileFormat: function (options) {
+          return 'smoke-test-results.xml';
+        },
       },
     ],
   ],
@@ -80,7 +73,7 @@ exports.config = {
     source: true,
     profile: [],
     strict: false,
-    tagExpression: "@debug",
+    tagExpression: "",
     timeout: 60000,
     ignoreUndefinedDefinitions: false,
   },
@@ -90,16 +83,6 @@ exports.config = {
   // =====
 
   beforeFeature: function () {
-    // const fs = require("fs");
-    // // directory path
-    // const dir = "./reports/html-reports/";
-    // // delete directory recursively
-    // fs.rmdir(dir, { recursive: true }, (err) => {
-    //   if (err) {
-    //     throw err;
-    //   }
-    //   console.log(`${dir} is deleted!`);
-    // });
     browser.maximizeWindow();
   },
 
@@ -112,7 +95,7 @@ exports.config = {
     } else {
       const timestamp = moment().format("DDMMYYYY-HHmmss.SSS");
       const filepath = path.join(
-        "reports/html-reports/screenshots/",
+        "reports/screenshots/",
         timestamp + ".png"
       );
       browser.saveScreenshot(filepath);
