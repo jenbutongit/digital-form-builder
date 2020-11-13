@@ -2,15 +2,6 @@ name: Deploy the static file to GitHub Page
 on: [ push ]
 jobs:
   - name: deploy docs
-    uses: ./smoke-tests/output
-    with:
-      username: ${{ secrets.USERNAME }}
-      password: ${{ secrets.PASSWORD }}
-      remote_url: https://github.com/TheSpartan1980/TheSpartan1980.github.io
-
-  - name: GitHub Pages Deploy
-    # You may pin to the exact commit or the version.
-    # uses: appleboy/gh-pages-action@fffb0030bac4fd166320d35bed6532b3b64969bb
     uses: appleboy/gh-pages-action@v0.0.2
     with:
       username: ${{ secrets.USERNAME }}
