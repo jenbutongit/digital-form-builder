@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Install gherkindoc with yarn
-        run: yarn add gerkindoc
+        run: yarn add gherkindoc
 
       - name: Run script
         run: node featuresToHtml.js
