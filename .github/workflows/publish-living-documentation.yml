@@ -19,3 +19,4 @@ jobs:
           # directory of content to sync
           target_directory: # optional
           remote_url: https://github.com/TheSpartan1980/TheSpartan1980.github.io
+          workspace: https://github.com/XGovFormBuilder/digital-form-builder.git
