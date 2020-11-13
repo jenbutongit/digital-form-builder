@@ -9,13 +9,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v1
 
-      - name: Install gherkindoc with yarn
-        run: yarn add gherkindoc
-
-      - name: Run script
-        run: node featuresToHtml.js
-        working-directory: smoke-tests
-
       - name: deploy docs
         uses: ./smoke-tests/output
         with:

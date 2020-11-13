@@ -13,6 +13,10 @@ package-lock.json
 /runner/tmp.pdf
 /model/module/
 /model/dist/
+smoke-tests/output/actions
+smoke-tests/output/pageobjects
+smoke-tests/output/step-definitions
+smoke-tests/output/*.feature
 smoke-tests/reports/
 */dist/
 */.dist/
