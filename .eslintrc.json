@@ -32,7 +32,8 @@
     "node_modules/**",
     "dist/**",
     "public/**",
-    "smoke-tests/features/*.feature"
+    "smoke-tests/features/*.feature",
+    "smoke-tests/features/output/*"
   ],
   "settings": {
     "react": {

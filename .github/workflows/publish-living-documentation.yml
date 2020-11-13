@@ -1,17 +1,9 @@
 name: Deploy the static file to GitHub Page
 on: [ push ]
 jobs:
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v1
-
-      - name: deploy docs
-        uses: ./smoke-tests/output
-        with:
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          remote_url: https://github.com/TheSpartan1980/TheSpartan1980.github.io
+  - name: deploy docs
+    uses: ./smoke-tests/output
+    with:
+      username: ${{ secrets.USERNAME }}
+      password: ${{ secrets.PASSWORD }}
+      remote_url: https://github.com/TheSpartan1980/TheSpartan1980.github.io
