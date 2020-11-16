@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Components</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" />
+<style>
+    .keyword {
+        font-weight: bold;
+    }
+    table, tr, td, th {
+        border: solid 1px;
+    }
+    td, th {
+        padding: 2px;
+    }
+</style></head>
+
+<body>
+<div class="container">
+
+<div class="feature container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Components</h1>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-block">
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-block">
+			<h2 class="card-title">User Story</h2>
+		</div>
+		<div class="card-block">
+			<p>As a forms designer
+ I want to create, update and delete components
+ So that I capture the information in my form</p>
+
+		</div>
+	</div>
+
+	<div id="feature-children">
+<div class="card">
+	<div class="card-block">
+		<h3 class="card-title Background">
+			Background: Create new config
+		</h3>
+	</div>
+	<div class="card-block">
+	</div>
+	<div class="card-block">
+		<!-- Steps -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">Given </span> I have created a new form configuration</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+		</div>
+		<!-- /Steps -->
+	</div>
+	<!-- Examples -->
+	<!-- /Examples -->
+</div><div class="card">
+	<div class="card-block">
+		<h3 class="card-title ScenarioOutline">
+			Scenario Outline: Add a component to a page
+		</h3>
+	</div>
+	<div class="card-block">
+	</div>
+	<div class="card-block">
+		<!-- Steps -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">When </span> I add a &quot;&lt;type&gt;&quot; control to the &quot;First page&quot;</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">Then </span> the &quot;&lt;type&gt;&quot; control is displayed in the &quot;First page&quot;</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+		</div>
+		<!-- /Steps -->
+	</div>
+	<!-- Examples -->
+	<div class="card-block">
+		<h4 class="card-title">Examples:</h4>
+		<table>
+			<!-- Table header -->
+			<tr>
+				<th>type</th>
+			</tr>
+			<!-- /Table header -->
+			<!-- Table Body -->
+			<tr>
+				<td>Date field</td>
+			</tr>
+			<tr>
+				<td>Date parts field</td>
+			</tr>
+			<tr>
+				<td>Date time field</td>
+			</tr>
+			<tr>
+				<td>Email address field</td>
+			</tr>
+			<tr>
+				<td>Paragraph</td>
+			</tr>
+			<tr>
+				<td>Text field</td>
+			</tr>
+			<!-- /Table Body -->
+		</table>
+	</div>
+	<!-- /Examples -->
+</div><div class="card">
+	<div class="card-block">
+		<h3 class="card-title Scenario">
+			Scenario: Add multiple components to a page
+		</h3>
+	</div>
+	<div class="card-block">
+	</div>
+	<div class="card-block">
+		<!-- Steps -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">When </span> I add multiple components to the &quot;First page&quot;</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">Then </span> all the components are displayed in the &quot;First page&quot;</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+		</div>
+		<!-- /Steps -->
+	</div>
+	<!-- Examples -->
+	<!-- /Examples -->
+</div><div class="card">
+	<div class="card-block">
+		<h3 class="card-title Scenario">
+			Scenario: Delete a component
+		</h3>
+	</div>
+	<div class="card-block">
+	</div>
+	<div class="card-block">
+		<!-- Steps -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">When </span> I add a &quot;Date field&quot; control to the &quot;First page&quot;</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">And </span> I delete the &quot;Date field&quot; control from the &quot;First page&quot;</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">Then </span> the &quot;Date field&quot; will not be visible in the &quot;First page&quot;</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+		</div>
+		<!-- /Steps -->
+	</div>
+	<!-- Examples -->
+	<!-- /Examples -->
+</div><div class="card">
+	<div class="card-block">
+		<h3 class="card-title Scenario">
+			Scenario: Edit Sections from the form designer menu
+		</h3>
+	</div>
+	<div class="card-block">
+	</div>
+	<div class="card-block">
+		<!-- Steps -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">When </span> I choose &quot;Edit Sections&quot; from the designer menu</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">And </span> I add a new section</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">Then </span> the section should be available when I edit the Question page</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+		</div>
+		<!-- /Steps -->
+	</div>
+	<!-- Examples -->
+	<!-- /Examples -->
+</div><div class="card">
+	<div class="card-block">
+		<h3 class="card-title Scenario">
+			Scenario: Edit Lists
+		</h3>
+	</div>
+	<div class="card-block">
+	</div>
+	<div class="card-block">
+		<!-- Steps -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">And </span> I choose &quot;Edit Lists&quot; from the designer menu</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">When </span> I add a new list</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">And </span> I create a &quot;List&quot; control for the &quot;First page&quot;</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+			<div class="row">
+				<div class="col-md-12"><span class="keyword">Then </span> the list is available in the list options</div>
+				<!-- argument -->
+				<!-- /argument -->
+			</div>
+		</div>
+		<!-- /Steps -->
+	</div>
+	<!-- Examples -->
+	<!-- /Examples -->
+</div>	</div>
+
+</div>
+</footer>
+</body>
+
+</html>
