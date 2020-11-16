@@ -15,7 +15,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           upstream_name: # optional, default is origin
           target_branch: master
-          pages_directory: ./smoke-tests/output
+          temporary_base: smoke-tests/
+          pages_directory: output
           # directory of content to sync
           target_directory: # optional
           remote_url: https://github.com/TheSpartan1980/TheSpartan1980.github.io
