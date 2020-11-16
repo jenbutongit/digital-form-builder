@@ -16,12 +16,8 @@ jobs:
           upstream_name: # optional, default is origin
           target_branch: feature/publish-living-documentation
           temporary_base: /
-#          pages_directory: output
+          #          pages_directory: output
           # directory of content to sync
           target_directory: # optional
           remote_url: https://github.com/XGovFormBuilder/digital-form-builder.git
           workspace: https://github.com/TheSpartan1980/TheSpartan1980.github.io.git
-
-
-  + git clone -b feature/publish-living-documentation --single-branch ***github.com/XGovFormBuilder/digital-form-builder.git
-  https:/github.com/***/***.github.io.git/smoke-tests/output
