@@ -1,0 +1,11 @@
+docker-compose.yml
+**/node_modules/**
+**/dist/**
+**/public/**
+node_modules/**
+dist/**
+public/**
+smoke-tests/designer/features/*.feature
+*.md
+.eslintrc.json
+package.json
