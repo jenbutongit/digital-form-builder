@@ -33,6 +33,24 @@ export const designerPlugin = {
         },
       });
 
+      server.route({
+        method: "GET",
+        path: "/feature-toggles",
+        options: {
+          handler: async (request, h) => {
+            let environmentVariables = process.env;
+
+            Object.keys(process.env).forEach(function (key) {
+              if (key.substring(0, 2) != "ff") {
+                delete environmentVariables[key];
+              }
+            });
+
+            return h.response(JSON.stringify(environmentVariables)).code(200);
+          },
+        },
+      });
+
       server.route(newConfig.registerNewFormWithRunner);
       server.route(api.getFormWithId);
       server.route(api.putFormWithId);
