@@ -16,7 +16,7 @@
     "smoke-tests/designer"
   ],
   "scripts": {
-    "start": "concurrently 'yarn designer start:local' 'yarn runner start:local'",
+    "start": "yarn designer start",
     "setup": "yarn && yarn build",
     "build": "yarn workspaces foreach -pt run build",
     "build:dependencies": "yarn model build",
