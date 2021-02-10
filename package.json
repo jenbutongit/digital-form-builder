@@ -18,7 +18,7 @@
   "scripts": {
     "start:heroku": "concurrently 'yarn designer start:local' 'yarn runner start:local'",
     "setup": "yarn && yarn build",
-    "build": "yarn workspaces foreach run build",
+    "build": "yarn workspaces foreach -pt run build",
     "build:dependencies": "yarn model build",
     "lint": "yarn workspaces foreach run lint",
     "test": "yarn workspaces foreach run test",
