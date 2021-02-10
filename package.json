@@ -82,7 +82,7 @@
     "webdriverio": "^6.6.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.11.2",
+    "@babel/runtime": "^7.11.2"
   },
   "husky": {
     "hooks": {
