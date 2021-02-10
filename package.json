@@ -33,7 +33,7 @@
     "type-check": "yarn workspaces foreach run tsc --noEmit",
     "type-check:watch": "yarn workspaces foreach run type-check --watch",
     "generate-architecture-diagrams": "npx arkit -c ./docs/designer/arkit.json && npx arkit -c ./docs/model/arkit.json && npx arkit -c ./docs/runner/arkit.json",
-    "heroku-prebuild": "rm -rf smoke-tests"
+    "heroku-cleanup": "rm -rf smoke-tests && yarn"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
