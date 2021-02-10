@@ -139,4 +139,16 @@ There are some features that we do not want to expose (for fear of wide adoption
       where `{ ...subcomponent }` is any valid `Component` object
 
 
+## Product Roadmap
 
+This outlines work that is currently being worked on and things we plan to work on next. The general answer to "when will X be done?" is "when it's ready," as we believe at this particular stage in our product lifecycle, it's more important to ensure shipping stable and solid code rather than rushing out new features. That said, we do value feedback from the community to help us better understand user needs and adjust priorities.
+
+### Alpha
+  1. Various improvements - Labels, Hint text, etc
+  2. Various bug fixes
+  3. Various accessiblity support features/fixes
+  4. Feature toggles - e.g. hiding minimap
+  5. Persistence of forms
+  6. Identity - Limited form editing to author/designer
+  7. Chunk of (known issues)[https://github.com/XGovFormBuilder/digital-form-builder/issues] 
+  8. Various Dependency & Security improvements
