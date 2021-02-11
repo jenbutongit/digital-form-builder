@@ -30,29 +30,12 @@ export default class Menu extends React.Component {
 
   onFileUpload = (e) => {
     const { save } = this.context;
-    const { data } = this.props;
     const file = e.target.files.item(0);
     const reader = new window.FileReader();
     reader.readAsText(file, "UTF-8");
+
     reader.onload = function (evt) {
       const content = JSON.parse(evt.target.result);
-
-      for (const page of content.pages) {
-        if (!page.title && page.components && page.components.length > 0) {
-          page.title = page.components[0].title;
-        }
-        for (const link of page.next || []) {
-          const nextPage = content.pages.find((np) => np.path === link.path);
-          if (nextPage && nextPage.condition) {
-            link.condition = nextPage.condition;
-          }
-        }
-      }
-
-      for (const page of content.pages) {
-        delete page.condition;
-      }
-
       save(content);
     };
   };
