@@ -142,16 +142,30 @@ There are some features that we do not want to expose (for fear of wide adoption
 ## Product Roadmap
 This outlines work that is currently being worked on and things we plan to work on next. The general answer to "when will X be done?" is "when it's ready," as we believe at this particular stage in our product lifecycle, it's more important to ensure shipping stable and solid code rather than rushing out new features. That said, we do value feedback from the community to help us better understand user needs and adjust priorities.
 
-### In progress now
+### In progress/Next
+In no particular order here is a list of what we are working on and next
   1. Various improvements - Labels, Hint text, etc
-  2. Various bug fixes
-  3. Various accessibility support features/fixes
-  4. Feature toggles - e.g. hiding minimap
-  5. Persistence of forms
-  6. Identity - Limited form editing to author/designer
-  7. Chunk of (known issues)[https://github.com/XGovFormBuilder/digital-form-builder/issues] 
-  8. Various Dependency & Security improvements
+  2. Various accessibility support features/fixes
+  3. Feature toggles
+  4. Persistence
+  5. Identity
+  6. [Known issues](https://github.com/XGovFormBuilder/digital-form-builder/issues)
 
+### Docker images
+
+Both application (Designer & Runner) can be run locally using [docker-compose](https://docs.docker.com/compose/)
+
+There are two configurations of docker-componse in the root folder
+
+```
+docker-compose.yml
+```
+This is used to run a container instances for Integration/Smoke style testing of the application
+
+```
+docker-compose-dev.yml
+```
+This is built of developers for local testing and testing while writing code. Key difference is both runner and designer are started in developer mode.
 ### Smoke tests
 
 There is a suite of smoke tests which are run against all PR's. There is nightly cron based action which executes smoke tests against the Heroku deployments. The nightly job is scheduled to run at midnight.
