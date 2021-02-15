@@ -19,7 +19,7 @@ It will also deal with hoisting the node_modules for any packages that are share
 
 **Always run scripts from the root directory.**
 
-1. Make sure you are using node >=12. `node --version`.
+1. Make sure you are using node >=12. upto 14. `node --version`.
 2. Make sure you have yarn 2.4+ installed.
 3. Run `$ yarn` command to install all dependencies in all workspaces.
 4. Run `$ yarn build` to build all workspaces (this is needed because dependencies can depend on each other).
@@ -140,15 +140,38 @@ There are some features that we do not want to expose (for fear of wide adoption
 
 
 ## Product Roadmap
-
 This outlines work that is currently being worked on and things we plan to work on next. The general answer to "when will X be done?" is "when it's ready," as we believe at this particular stage in our product lifecycle, it's more important to ensure shipping stable and solid code rather than rushing out new features. That said, we do value feedback from the community to help us better understand user needs and adjust priorities.
 
-### Alpha
+### In progress now
   1. Various improvements - Labels, Hint text, etc
   2. Various bug fixes
-  3. Various accessiblity support features/fixes
+  3. Various accessibility support features/fixes
   4. Feature toggles - e.g. hiding minimap
   5. Persistence of forms
   6. Identity - Limited form editing to author/designer
   7. Chunk of (known issues)[https://github.com/XGovFormBuilder/digital-form-builder/issues] 
   8. Various Dependency & Security improvements
+
+### Smoke tests
+
+There is a suite of smoke tests which are run against all PR's. There is nightly cron based action which executes smoke tests against the Heroku deployments. The nightly job is scheduled to run at midnight.
+
+To run the smoke tests locally, you start the containers up using the command
+
+```
+docker-compose up --build
+```
+Then smoke test can be executed using command
+
+```
+yarn smoke-tests/designer smoke-test-headless
+```
+
+Pre-requite for running smoke test are:
+ 1. Yarn 
+ 2. JVM 
+ 2. a browser like chrome
+ 3. Node version 12+ upto 14
+ 4. yarn install
+ 
+ More details are on [Smoke Tests](./smoke-tests/README.md)

@@ -1,4 +1,5 @@
 const Page = require("./basePage");
+const ComponentMappings = require("../../../support/componentMapping");
 
 class FormDesignerPage extends Page {
   get addComponentToPage() {
@@ -50,6 +51,13 @@ class FormDesignerPage extends Page {
     return this.pageContainer(pageName).react$("TextField");
   }
 
+  getComponentOnPage(pageName, componentName) {
+    const mappedName = ComponentMappings[componentName]
+      ? ComponentMappings[componentName]
+      : componentName;
+    return this.pageContainer(pageName).react$(mappedName);
+  }
+
   pageContainer(name) {
     return this.formPages.find((el) => el.getText().includes(name));
   }
@@ -59,6 +67,9 @@ class FormDesignerPage extends Page {
    * @param componentType
    */
   editPageComponent(componentType) {
+    browser
+      .$(`.component-${componentType.toLowerCase()}`)
+      .waitForDisplayed({ interval: 1000 });
     browser.$(`.component-${componentType.toLowerCase()}`).click();
   }
 
