@@ -1,6 +1,8 @@
 import hapi from "@hapi/hapi";
 import inert from "@hapi/inert";
 import Scooter from "@hapi/scooter";
+import kube from "hapi-on-kubernetes";
+import health from "hapi-and-healthy";
 import logging from "./plugins/logging";
 import router from "./plugins/router";
 import { viewPlugin } from "./plugins/view";
@@ -40,6 +42,7 @@ export async function createServer() {
   await server.register(designerPlugin);
   await server.register(router);
   await server.register(logging);
-
+  await server.register(kube);
+  await server.register(health);
   return server;
 }

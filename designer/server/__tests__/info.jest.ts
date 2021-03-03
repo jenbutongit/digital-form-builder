@@ -1,10 +1,10 @@
-describe(`/health-check Route`, () => {
+describe(`/info Route`, () => {
   const OLD_ENV = process.env;
 
-  test("/health-check route response is correct", async () => {
+  test("/info route response is correct", async () => {
     const options = {
       method: "GET",
-      url: "/health-check",
+      url: "/info",
     };
 
     process.env = {

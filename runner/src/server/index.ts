@@ -18,6 +18,8 @@ import pluginRouter from "./plugins/router";
 import pluginErrorPages from "./plugins/errorPages";
 import pluginLogging from "./plugins/logging";
 import pluginPulse from "./plugins/pulse";
+import kube from "hapi-on-kubernetes";
+import health from "hapi-and-healthy";
 import {
   CacheService,
   catboxProvider,
@@ -128,6 +130,8 @@ async function createServer(routeConfig: RouteConfig) {
   await server.register(pluginApplicationStatus);
   await server.register(pluginRouter);
   await server.register(pluginErrorPages);
+  await server.register(kube);
+  await server.register(health);
 
   if (!config.isTest) {
     await server.register(blipp);

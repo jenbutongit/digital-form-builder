@@ -6,7 +6,7 @@ import config from "src/server/config";
 
 const { before, test, suite, after } = (exports.lab = Lab.script());
 
-suite(`/health-check Route`, () => {
+suite(`/info Route`, () => {
   let server;
 
   before(async () => {
@@ -20,10 +20,10 @@ suite(`/health-check Route`, () => {
     await server.stop();
   });
 
-  test("/health-check route response is correct", async () => {
+  test("/info route response is correct", async () => {
     const options = {
       method: "GET",
-      url: "/health-check",
+      url: "/info",
     };
 
     const { result } = await server.inject(options);

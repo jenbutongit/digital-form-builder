@@ -49,3 +49,7 @@ export const redirectOldUrlToDesigner: ServerRoute = {
     },
   },
 };
+
+// const health = require('@cloudnative/health-connect');
+// let healthcheck = new health.HealthChecker();
+// app.use('/health', health.LivenessEndpoint(healthcheck));

@@ -1,1 +1,3 @@
 docker-compose.yml
+docs/designer/architecture-diagram.svg
+docs/runner/architecture-diagram.svg

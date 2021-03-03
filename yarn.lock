@@ -58,7 +58,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.11":
+"@babel/code-frame@npm:7.12.11, @babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.11":
   version: 7.12.11
   resolution: "@babel/code-frame@npm:7.12.11"
   dependencies:
@@ -1612,6 +1612,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cloudnative/health-connect@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@cloudnative/health-connect@npm:2.1.0"
+  dependencies:
+    "@cloudnative/health": ^2.1.1
+  checksum: f05c82933a5216e3fa43321c093a59289c66ab96eb3d814865f335ac4455984aa3cea67ee2728706033f0ae49068ddc79d22c0ad3f3906b2f6748a1e664f4c9e
+  languageName: node
+  linkType: hard
+
+"@cloudnative/health@npm:^2.1.1":
+  version: 2.1.2
+  resolution: "@cloudnative/health@npm:2.1.2"
+  checksum: d1de8505232388cb614951cfa92db05d36edf233170f35004fe71ea1ea18c489c0c1767ce1f67ecd0290f566e42c6562eb0a14b7b988daadcafdfd3b9837d99a
+  languageName: node
+  linkType: hard
+
 "@cnakazawa/watch@npm:^1.0.3":
   version: 1.0.4
   resolution: "@cnakazawa/watch@npm:1.0.4"
@@ -1851,6 +1867,23 @@ __metadata:
     minimatch: ^3.0.4
     strip-json-comments: ^3.1.1
   checksum: 00e87c194672eb85dcea22ba749fb3cabdd9768e952e748b2c727940f06691c873369d75cf3bddb239301eca8c38de6e098b0de4839fa7c16a2062e536e8ff5a
+  languageName: node
+  linkType: hard
+
+"@eslint/eslintrc@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@eslint/eslintrc@npm:0.4.0"
+  dependencies:
+    ajv: ^6.12.4
+    debug: ^4.1.1
+    espree: ^7.3.0
+    globals: ^12.1.0
+    ignore: ^4.0.6
+    import-fresh: ^3.2.1
+    js-yaml: ^3.13.1
+    minimatch: ^3.0.4
+    strip-json-comments: ^3.1.1
+  checksum: d3f51b741997cbf36662d8b5a52985bfa5d2873e48cadccd95c67fcce1706327ec98ebb6f0be79c6ecbc31bdeca32c2b1c4f66fd1cf3934c434d1ac269cbceac
   languageName: node
   linkType: hard
 
@@ -4526,6 +4559,8 @@ __metadata:
     flat: 5.0.0
     focus-trap-react: ^8.3.2
     govuk-frontend: ^3.10.1
+    hapi-and-healthy: ^7.0.7
+    hapi-on-kubernetes: ^1.0.10
     hapi-pino: ^8.0.1
     hoek: ^6.1.3
     html-webpack-plugin: ^4.5.0
@@ -4693,6 +4728,8 @@ __metadata:
     form-data: 3.0.0
     googleapis: 64.0.0
     govuk-frontend: ^3.10.1
+    hapi-and-healthy: ^7.0.7
+    hapi-on-kubernetes: ^1.0.10
     hapi-pino: 8.0.0
     hapi-pulse: 3.0.0
     hapi-rate-limit: 4.1.0
@@ -8757,6 +8794,7 @@ __metadata:
     "@babel/preset-typescript": ^7.12.7
     "@babel/register": ^7.10.5
     "@babel/runtime": ^7.11.2
+    "@cloudnative/health-connect": ^2.1.0
     "@hapi/code": ^8.0.1
     "@hapi/lab": ^24.0.0
     "@types/hapi__vision": ^5.5.2
@@ -10173,6 +10211,53 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint@npm:^7.7.0":
+  version: 7.21.0
+  resolution: "eslint@npm:7.21.0"
+  dependencies:
+    "@babel/code-frame": 7.12.11
+    "@eslint/eslintrc": ^0.4.0
+    ajv: ^6.10.0
+    chalk: ^4.0.0
+    cross-spawn: ^7.0.2
+    debug: ^4.0.1
+    doctrine: ^3.0.0
+    enquirer: ^2.3.5
+    eslint-scope: ^5.1.1
+    eslint-utils: ^2.1.0
+    eslint-visitor-keys: ^2.0.0
+    espree: ^7.3.1
+    esquery: ^1.4.0
+    esutils: ^2.0.2
+    file-entry-cache: ^6.0.1
+    functional-red-black-tree: ^1.0.1
+    glob-parent: ^5.0.0
+    globals: ^12.1.0
+    ignore: ^4.0.6
+    import-fresh: ^3.0.0
+    imurmurhash: ^0.1.4
+    is-glob: ^4.0.0
+    js-yaml: ^3.13.1
+    json-stable-stringify-without-jsonify: ^1.0.1
+    levn: ^0.4.1
+    lodash: ^4.17.20
+    minimatch: ^3.0.4
+    natural-compare: ^1.4.0
+    optionator: ^0.9.1
+    progress: ^2.0.0
+    regexpp: ^3.1.0
+    semver: ^7.2.1
+    strip-ansi: ^6.0.0
+    strip-json-comments: ^3.1.0
+    table: ^6.0.4
+    text-table: ^0.2.0
+    v8-compile-cache: ^2.0.3
+  bin:
+    eslint: bin/eslint.js
+  checksum: aa8fd50cddc4ab259e2d0ff8f43f0601060543c12e335d76ee074bf25ad02a885bea9d48a367de736d3bdb871de7eb62e6d67930c0173cc46280ddd0f236e740
+  languageName: node
+  linkType: hard
+
 "eslint@npm:~5.4.0":
   version: 5.4.0
   resolution: "eslint@npm:5.4.0"
@@ -10338,6 +10423,15 @@ __metadata:
   dependencies:
     estraverse: ^5.1.0
   checksum: 0aac7572bc8cf4aad87f4424b3e5e80917c214d15a1da02718c4bb0e6030552b0dea700777747507d5e310cfba43ea719e6397a45050fb50b9b68c0f7de6b26a
+  languageName: node
+  linkType: hard
+
+"esquery@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "esquery@npm:1.4.0"
+  dependencies:
+    estraverse: ^5.1.0
+  checksum: 3293ecc1507a8cec8d2da8a4707275c2ccf5413e7a3c771fe41c16cee603cacd193bb7383a6e219d1f7d2449156ef575ffd66c839073d4a8058f72856a15f622
   languageName: node
   linkType: hard
 
@@ -10904,6 +10998,15 @@ __metadata:
   dependencies:
     flat-cache: ^3.0.4
   checksum: aec91f60f903a61f6edd8591f574692a36e054a99f7b1e280823316fde7d487aaf9a0b59db59387c6e071c10ce0e40771f8472067ebe746fe3b7f095f0877be0
+  languageName: node
+  linkType: hard
+
+"file-entry-cache@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "file-entry-cache@npm:6.0.1"
+  dependencies:
+    flat-cache: ^3.0.4
+  checksum: af83a412143100405a995bb7d9a31982ebcfabe6c545dac2e787fc5580b2da74e253ef62968057fa5bbfaf0811a8b85623aeea776e16c77e3ce4c2488b0e4821
   languageName: node
   linkType: hard
 
@@ -12091,6 +12194,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"hapi-and-healthy@npm:^7.0.7":
+  version: 7.0.7
+  resolution: "hapi-and-healthy@npm:7.0.7"
+  dependencies:
+    humanize-duration: 3.20.1
+    lodash: 4.17.15
+    pretty-bytes: 5.3.0
+  checksum: 5a4517be9fe7f86366295d35f089c53095e123ea26e3ed4688dd9bf7dd2efd57e9d37157745729bb9271ffe73475ce8d0871b0900dc98aceeb9f199521f3033d
+  languageName: node
+  linkType: hard
+
 "hapi-capitalize-modules@npm:1.x.x":
   version: 1.1.6
   resolution: "hapi-capitalize-modules@npm:1.1.6"
@@ -12109,6 +12223,15 @@ fsevents@~2.1.2:
   version: 1.0.1
   resolution: "hapi-no-var@npm:1.0.1"
   checksum: a0aecd950481e3b00257dddc291568fc5a4ccea4597783d1709a339881bd02ec4dee91b213a07594db076209d3a8ef6644e0a91f9daa06c600823cfc9cfa7a88
+  languageName: node
+  linkType: hard
+
+"hapi-on-kubernetes@npm:^1.0.10":
+  version: 1.0.10
+  resolution: "hapi-on-kubernetes@npm:1.0.10"
+  dependencies:
+    eslint: ^7.7.0
+  checksum: 6a413df0a66bb1df5ee5b5d19468b51386b882bb43358e6138b91e8dc8de388bf8a7a39f8cce286b37888b91cdec7dda1a9b9ea9f6970f62a6696b95af53c933
   languageName: node
   linkType: hard
 
@@ -12681,6 +12804,13 @@ fsevents@~2.1.2:
   version: 1.1.1
   resolution: "human-signals@npm:1.1.1"
   checksum: cac115f635090055427bbd9d066781b17de3a2d8bbf839d920ae2fa52c3eab4efc63b4c8abc10e9a8b979233fa932c43a83a48864003a8c684ed9fb78135dd45
+  languageName: node
+  linkType: hard
+
+"humanize-duration@npm:3.20.1":
+  version: 3.20.1
+  resolution: "humanize-duration@npm:3.20.1"
+  checksum: 44d22b96f54025519974a4d311622cbaf281abc8bf5e6805d4afc67cac501f02ecf1ea556fa82777739d227f39856c96d7383a49c5d2c0fbfa0d3497ff2e25ad
   languageName: node
   linkType: hard
 
@@ -15499,6 +15629,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"lodash@npm:4.17.15":
+  version: 4.17.15
+  resolution: "lodash@npm:4.17.15"
+  checksum: aec3fbb7570aa67bda500b8299b1b1821d60646bede87f76a74dfcc7666ab3445267d734ec71424d70809d52ad67a1356fab5ab694a3faa1908d68e9d48f00f5
+  languageName: node
+  linkType: hard
+
 "lodash@npm:^4.0.0, lodash@npm:^4.13.1, lodash@npm:^4.15.0, lodash@npm:^4.17.11, lodash@npm:^4.17.12, lodash@npm:^4.17.13, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.4, lodash@npm:^4.17.5, lodash@npm:^4.3.0, lodash@npm:~4.17.10":
   version: 4.17.20
   resolution: "lodash@npm:4.17.20"
@@ -18145,6 +18282,13 @@ fsevents@~2.1.2:
   bin:
     prettier: bin-prettier.js
   checksum: bedc24c568efbcfe45f255558900777e2fabb36bf28ed4c22d2456eb22dfb012d12e566a46472ea5b857a4e9f263e888f7e316527d00bb58188f1820b0b0031a
+  languageName: node
+  linkType: hard
+
+"pretty-bytes@npm:5.3.0":
+  version: 5.3.0
+  resolution: "pretty-bytes@npm:5.3.0"
+  checksum: ecc6b1670f7ebcf6c78b91edad97ffdc0be58283ff5fa6c95c99c6bda48d2aa1858367fae8eccce35bc36eb90ec3cbcc24b9d7e29fd6ad98cc52d53d2e307789
   languageName: node
   linkType: hard
 
@@ -23659,17 +23803,10 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"y18n@npm:^4.0.0":
+"y18n@npm:4.0.1":
   version: 4.0.1
   resolution: "y18n@npm:4.0.1"
   checksum: e589620d8d668d696e74730a83731a36a8d782c50379386b142e5b8287388a6ebaf28528e84201c68c206629faed71362c79b201b398eb0c69aa1737635678dd
-  languageName: node
-  linkType: hard
-
-"y18n@npm:^5.0.5":
-  version: 5.0.5
-  resolution: "y18n@npm:5.0.5"
-  checksum: a7d41b0cccca1c98ebab270a944df48eb3b5352d3be0affb8afc8369823f6aa97a5fbead2c5b35e59a5650cb786b2b37627b45be5ff31f02a80dd3b881aceb17
   languageName: node
   linkType: hard
 
