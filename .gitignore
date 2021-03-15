@@ -25,4 +25,5 @@ tsconfig.tsbuildinfo
 !.yarn/versions
 .pnp.*
 .yarn/build-state.yml
-.yarn/install-state.gz
+i.yarn/install-state.gz
+.scannerwork/
