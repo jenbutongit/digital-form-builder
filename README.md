@@ -2,6 +2,8 @@
 
 [![Gitter](https://badges.gitter.im/XGovFormBuilder/Public.svg)](https://gitter.im/XGovFormBuilder/Public?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+[![CodeFactor](https://www.codefactor.io/repository/github/xgovformbuilder/digital-form-builder/badge)](https://www.codefactor.io/repository/github/xgovformbuilder/digital-form-builder)
+
 This repository is a mono repo for
 
 - @xgovformbuilder/[runner](https://github.com/XGovFormBuilder/digital-form-builder/tree/master/runner) - Hapi server which can 'run' a form from a JSON file
