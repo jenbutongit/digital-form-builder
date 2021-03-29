@@ -7,10 +7,10 @@
 ## Context
 This is just an area where architectural decisions/docs made on, or before 26-03-2021 can be recorded.
 
-###ERD
+### ERD
 ![](0000-ERD.svg)
 
-###Class Diagram
+### Class Diagram
 ![](0000-class-diagram.svg)
 
 
