@@ -208,4 +208,13 @@ export const ComponentTypes: ComponentDef[] = [
     schema: {},
     list: "",
   },
+  {
+    name: "URLField",
+    type: "URLField",
+    title: "URL field",
+    subType: "field",
+    hint: "",
+    options: {},
+    schema: {},
+  },
 ];

@@ -35,6 +35,7 @@ export const componentTypes = {
   FlashCard: FlashCard,
   List: List,
   WarningText: WarningText,
+  URLField: TextField,
 };
 
 function Base(props) {
