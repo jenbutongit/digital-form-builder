@@ -21,5 +21,15 @@
   ],
   "paths": {
     "*": ["node_modules/*", "../node_modules"]
+  },
+  "typedocOptions": {
+    "out": "../docs/designer/typedoc",
+    "entryPoints": "./server/index.ts",
+    "exclude": [
+      "node_modules",
+      "**/node_modules",
+      "test",
+      "**/*+(index|.test|.jest).(ts|tsx)"
+    ]
   }
 }
