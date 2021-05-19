@@ -28,4 +28,5 @@ export { TelephoneNumberField } from "./TelephoneNumberField";
 export { TextField } from "./TextField";
 export { TimeField } from "./TimeField";
 export { UkAddressField } from "./UkAddressField";
+export { URL } from "./URLField";
 export { YesNoField } from "./YesNoField";
