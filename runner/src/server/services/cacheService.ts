@@ -22,12 +22,18 @@ export class CacheService {
    * This service is responsible for getting, storing or deleting a user's session data in the cache. This service has been registered by {@link createServer}
    */
   cache: any;
+  logger: any;
 
   constructor(server: HapiServer) {
     this.cache = server.cache({ segment: "cache" });
+    this.logger = server.logger;
   }
 
   async getState(request: HapiRequest): Promise<FormSubmissionState> {
+    request.logger.error(
+      ["cacheService", "key"],
+      `${request.yar.id}:${request.params.id}`
+    );
     const cached = await this.cache.get(this.Key(request));
     return cached || {};
   }
@@ -58,6 +64,10 @@ export class CacheService {
    * @param request - hapi request object
    */
   Key(request: HapiRequest) {
+    this.logger.error(
+      ["cacheService", "key", `${request.yar.id}:${request.params.id}`],
+      `${request.yar.id}:${request.params.id}`
+    );
     return {
       segment: partition,
       id: `${request.yar.id}:${request.params.id}`,
@@ -107,6 +117,8 @@ export const catboxProvider = () => {
   } else {
     provider.options = { partition };
   }
+
+  console.warn("provider", provider);
 
   return provider;
 };
